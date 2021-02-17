@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andreyklm01/goit-js-hw-10-food-service"
+    "url": "git+https://github.com/Andreyklm01/goit-js-hw-10-food-service.git"
   },
   "keywords": [],
   "author": "Andrey Klemenko <web.klemenko@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/Andreyklm01",
+  "homepage": "https://Andreyklm01.github.io/goit-js-hw-10-food-service/",
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
