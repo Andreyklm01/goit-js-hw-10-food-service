@@ -5,30 +5,23 @@ const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
-
-const switchTheme = () => {
-  if (switchThemeRef.checked) {
-    body.classList.add(Theme.DARK);
-    localStorage.setItem('currentTheme', Theme.DARK);
-    body.classList.remove(Theme.LIGHT);
-  } else {
-    body.classList.add(Theme.LIGHT);
-    localStorage.setItem('currentTheme', Theme.LIGHT);
-    body.classList.remove(Theme.DARK);
-  }
-};
-
 switchThemeRef.addEventListener('change', switchTheme);
+body.classList.add(Theme.LIGHT);
 
-// local storage
-const saveTheme = () => {
+function switchTheme() {
+  if (switchThemeRef.checked) {
+    body.classList.replace(Theme.LIGHT, Theme.DARK);
+    localStorage.setItem('currentTheme', Theme.DARK);
+  } else {
+    body.classList.replace(Theme.DARK, Theme.LIGHT);
+    localStorage.setItem('currentTheme', Theme.LIGHT);
+  }
+}
+
+function setTheme() {
   if (localStorage.getItem('currentTheme') === Theme.DARK) {
     switchThemeRef.checked = true;
-    body.classList.add(Theme.DARK);
-  } else {
-    switchThemeRef.checked = false;
-    body.classList.add(Theme.LIGHT);
+    body.classList.replace(Theme.LIGHT, Theme.DARK);
   }
-};
-saveTheme();
-// Переделать!
+}
+setTheme();
